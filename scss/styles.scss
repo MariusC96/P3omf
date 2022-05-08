@@ -2,49 +2,52 @@
 @import './_variable';
 @import './_composent';
 
-body{
+body {
     padding: 0;
     margin: 0;
-    font-family:sans-serif ;
-    max-width: 768px;
+    font-family: sans-serif;
     text-decoration: none;
 }
-.titlelogo{
+/* header*/ 
+.titlelogo {
     @include flexMid;
     padding: 10px;
     background-color: white;
-    box-shadow: 0px 0px 10px #767676;
-
 }
-img{
+
+img {
     width: 250px;
     height: 50px;
 }
 
-.nav{
-    padding-right: 20vh;
-@include flexMid;
-background-color: #f2f2f2;
-
-    .logo{
+.nav {
+    @include flexMid;
+    background-color: $gray-color-banner;
+    box-shadow: 0px -1px 3px gray;
+    .logo {
         padding: 20px;
     }
-
-  p{
-      color: gray;
-      font-size: 25px;
-      
-  }
+    p {
+        color: gray;
+        font-size: 25px;
+    }
 }
-.menu{
+.menu {
+    width: auto;
+    height: 300px;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
-    
-
+    p{
+        font-size: 30px;
+        text-align: center;
+        color: gray;
+    }
 }
-.button{
+.button {
     padding: 20px;
     font-size: 20px;
     color: white;
@@ -52,11 +55,35 @@ background-color: #f2f2f2;
     width: auto;
     border: none;
     border-radius: 50px;
-    background: rgb(147,86,220);
-    background: rgb(147,86,220);
-    background: linear-gradient(0deg, rgba(147,86,220,1) 9%, rgba(255,121,218,0.8870141806722689) 86%);    
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 9%, rgba(255, 121, 218, 0.8870141806722689) 86%);
 }
-.titlemenu{
-    width: auto;
-    background-color:green;
+.titlemenu {
+    width: 350px;
+    text-align: center;
+}
+
+/*fonctionnement */
+
+h2{
+    font-size: 30px;
+   padding: 20px;
+}
+.choice{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  
+p{
+    font-size: 25px;
+    font-weight: 500;
+}
+}
+.item{
+    @include item;
+}
+.number1{
+    @include buttonlist;
+}
+.phonelogo{
+  @include flexMid;
 }
