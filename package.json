@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/index.scss:./css/index.css ./sass/restaurants.scss:./css/restaurants.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusC96/P3omf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusC96/P3omf/issues"
+  },
+  "homepage": "https://github.com/MariusC96/P3omf#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
