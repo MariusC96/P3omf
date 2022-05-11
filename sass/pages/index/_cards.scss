@@ -19,6 +19,7 @@
         
     }
 .img__card img{
+    object-fit: cover;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     width: 500px;
@@ -26,7 +27,15 @@
 }
 .nouveau{
     position: absolute;
-    top: 1300px;
+    top: 1420px;
+    left: 450px;
+    width: auto;
+    padding: 10px;
+    background-color: $green-color;
+}
+.nouveau1{
+    position: absolute;
+    top: 1820px;
     left: 450px;
     width: auto;
     padding: 10px;
@@ -37,8 +46,12 @@
     font-weight: 900;
     margin: 0;
 }
+.nouveau1 p{
+    color:rgb(6, 126, 96);
+    font-weight: 900;
+    margin: 0;
+}
 .descriptif{
-    
     display: flex;
     padding-left: 10px;
     font-weight: 900;
@@ -52,5 +65,8 @@
    font-size: 20px;
    font-weight: 900;
    padding: 10px;
+}
+.fa-purple{
+    color: $purple-color;
 }
 }

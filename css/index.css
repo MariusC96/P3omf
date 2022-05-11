@@ -2,6 +2,8 @@
 /* gradient color button */
 /* box-shadow */
 /* color page */
+/* font */
+/* change color img in white */
 body {
   padding: 0;
   margin: 0;
@@ -39,6 +41,46 @@ img {
 .nav p {
   color: gray;
   font-size: 25px;
+}
+
+footer {
+  height: 100%;
+}
+
+.box__footer {
+  display: flex;
+  flex-direction: column;
+  background: rgb(48, 48, 48);
+  color: white;
+}
+.box__footer .footer__logo img {
+  padding: 30px 0px 30px 60px;
+  width: 120px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+.box__footer .icon__fork {
+  padding-left: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box__footer .fa-utensils {
+  padding: 10px;
+}
+.box__footer .icon__hand {
+  padding-left: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box__footer .fa-handshake-angle {
+  padding: 7px;
+}
+.box__footer .text__footer {
+  padding-left: 60px;
 }
 
 .button {
@@ -79,6 +121,7 @@ img {
 .fonctionnement {
   display: flex;
   flex-direction: column;
+  padding: 30px;
   gap: 30px;
   height: 600px;
 }
@@ -91,7 +134,7 @@ img {
   gap: 50px;
   background-color: #f2f2f2;
   border-radius: 50px;
-  box-shadow: box-shadow 0px 5px 10px rgb(211, 204, 204);
+  box-shadow: 0px 5px 10px rgb(211, 204, 204);
 }
 .fonctionnement__item .number {
   display: flex;
@@ -115,7 +158,7 @@ img {
 }
 
 .text p {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -132,7 +175,7 @@ img {
 }
 .restaurants .card {
   background-color: white;
-  box-shadow: box-shadow 0px 5px 10px rgb(211, 204, 204);
+  box-shadow: 0px 5px 10px rgb(211, 204, 204);
   width: 500px;
   height: 100%;
   border-radius: 30px;
@@ -140,6 +183,7 @@ img {
   flex-direction: column;
 }
 .restaurants .img__card img {
+  object-fit: cover;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 500px;
@@ -147,13 +191,26 @@ img {
 }
 .restaurants .nouveau {
   position: absolute;
-  top: 1300px;
+  top: 1420px;
+  left: 450px;
+  width: auto;
+  padding: 10px;
+  background-color: #99E2D0;
+}
+.restaurants .nouveau1 {
+  position: absolute;
+  top: 1820px;
   left: 450px;
   width: auto;
   padding: 10px;
   background-color: #99E2D0;
 }
 .restaurants .nouveau p {
+  color: rgb(6, 126, 96);
+  font-weight: 900;
+  margin: 0;
+}
+.restaurants .nouveau1 p {
   color: rgb(6, 126, 96);
   font-weight: 900;
   margin: 0;
@@ -172,6 +229,9 @@ img {
   font-size: 20px;
   font-weight: 900;
   padding: 10px;
+}
+.restaurants .fa-purple {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=index.css.map */

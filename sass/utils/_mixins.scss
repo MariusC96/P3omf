@@ -9,3 +9,9 @@
     flex-direction: column;
     
 }
+
+@mixin flexrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

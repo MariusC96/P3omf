@@ -2,6 +2,8 @@
 /* gradient color button */
 /* box-shadow */
 /* color page */
+/* font */
+/* change color img in white */
 body {
   padding: 0;
   margin: 0;
@@ -39,6 +41,46 @@ img {
 .nav p {
   color: gray;
   font-size: 25px;
+}
+
+footer {
+  height: 100%;
+}
+
+.box__footer {
+  display: flex;
+  flex-direction: column;
+  background: rgb(48, 48, 48);
+  color: white;
+}
+.box__footer .footer__logo img {
+  padding: 30px 0px 30px 60px;
+  width: 120px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+.box__footer .icon__fork {
+  padding-left: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box__footer .fa-utensils {
+  padding: 10px;
+}
+.box__footer .icon__hand {
+  padding-left: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box__footer .fa-handshake-angle {
+  padding: 7px;
+}
+.box__footer .text__footer {
+  padding-left: 60px;
 }
 
 .button {
