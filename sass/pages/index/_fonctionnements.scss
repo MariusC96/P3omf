@@ -22,7 +22,7 @@
     align-items: center;
     gap: 50px;
     background-color: $gray-color-banner;
-    border-radius: 50px;
+    border-radius: 30px;
     box-shadow:$box-shadow;
 
     .number{
@@ -36,6 +36,7 @@
         background-color: $purple-color;
         border-radius: 100%; 
         font-size: 20px;
+        margin-left: -15px;
     }
     .icon{
         @include flexMid;

@@ -1,72 +1,79 @@
-.restaurants{
-    display:flex;
+.restaurants {
+    display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color:$gray-color-banner;
+    background-color: $gray-color-banner;
     padding: 50px;
-&__title{
-    font-size: 20px;
-    font-weight: 900;
-}
-    .card{
+
+    &__title {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .card {
         background-color: white;
         box-shadow: $box-shadow;
         width: 500px;
         height: 100%;
         border-radius: 30px;
         display: flex;
-        flex-direction:column;
-        
+        flex-direction: column;
+
+        .img__card {
+
+            position: relative;
+            img {
+                object-fit: cover;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                width: 500px;
+                height: 250px;
+            }
+
+            .nouveau {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: auto;
+                padding: 10px;
+                background-color: $green-color;
+
+                .nouveau p {
+                    color: rgb(6, 126, 96);
+                    font-weight: 900;
+                    margin: 0;
+                }
+            }
+        }
+
+
+        .descriptif {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+           
+            &__titre{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h3{
+
+                }
+                p{
+
+                }
+            }
+            &__icon{
+display: flex;
+align-items: center;
+
+.fa-heart{
+    font-size: 24px;
+}
+            }
+        }
     }
-.img__card img{
-    object-fit: cover;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    width: 500px;
-    height: 250px;
-}
-.nouveau{
-    position: absolute;
-    top: 1420px;
-    left: 450px;
-    width: auto;
-    padding: 10px;
-    background-color: $green-color;
-}
-.nouveau1{
-    position: absolute;
-    top: 1820px;
-    left: 450px;
-    width: auto;
-    padding: 10px;
-    background-color: $green-color;
-}
-.nouveau p{
-    color:rgb(6, 126, 96);
-    font-weight: 900;
-    margin: 0;
-}
-.nouveau1 p{
-    color:rgb(6, 126, 96);
-    font-weight: 900;
-    margin: 0;
-}
-.descriptif{
-    display: flex;
-    padding-left: 10px;
-    font-weight: 900;
-}
-.descriptif__icon{
-    height: 30px;
-    display: flex;
-    justify-content:space-between;
-    flex-direction: row;
-   align-items: center;
-   font-size: 20px;
-   font-weight: 900;
-   padding: 10px;
-}
-.fa-purple{
-    color: $purple-color;
-}
+
+
 }
