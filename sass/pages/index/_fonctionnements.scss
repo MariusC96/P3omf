@@ -10,8 +10,16 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
-    gap: 30px;  
-   
+    gap: 30px;   
+
+    a{
+        padding: 10px;
+        color:black; 
+        text-decoration:none;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      
 
 &__item{
     width: 100%;
@@ -19,10 +27,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     background-color: $gray-color-banner;
     border-radius: 30px;
     box-shadow:$box-shadow;
+
+    &:hover{
+        background-color:rgba(220, 192, 248, 0.973);
+    }
+    
 
     .number{
         display: flex;
@@ -40,13 +53,16 @@
     .icon{
         @include flexMid;
         .fa-store{
-            color:#9356DC;
+            &:hover{
+                color: $purple-color;
+            }
+            
+            
         }
+        
       }
 
 }
 }
-.text p{
-    font-size: 20px;
-    font-weight: 700;
-   }
+
+

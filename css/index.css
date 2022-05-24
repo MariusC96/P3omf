@@ -158,16 +158,26 @@ footer {
   padding: 30px;
   gap: 30px;
 }
+.fonctionnement a {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
 .fonctionnement__item {
   width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
   background-color: #f2f2f2;
   border-radius: 30px;
   box-shadow: 0px 5px 10px rgb(211, 204, 204);
+}
+.fonctionnement__item:hover {
+  background-color: rgba(220, 192, 248, 0.973);
 }
 .fonctionnement__item .number {
   display: flex;
@@ -187,13 +197,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement__item .icon .fa-store {
+.fonctionnement__item .icon .fa-store:hover {
   color: #9356DC;
-}
-
-.text p {
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .restaurants {
@@ -243,22 +248,38 @@ footer {
   font-weight: 900;
   margin: 0;
 }
-.restaurants .card .descriptif {
+
+.descriptif {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
 }
-.restaurants .card .descriptif__titre {
+.descriptif__titre {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.restaurants .card .descriptif__icon {
+.descriptif__icon {
   display: flex;
   align-items: center;
+  position: relative;
 }
-.restaurants .card .descriptif__icon .fa-heart {
+.descriptif__icon .fa-heart1 {
+  color: black;
+  position: absolute;
+}
+.descriptif__icon .fa-heart1:active {
+  color: blue;
+}
+.descriptif__icon .hiddenheart .fa-solid {
+  opacity: 0;
+}
+.descriptif__icon .hiddenheart .fa-solid:active {
+  opacity: 1;
+  color: #9356DC;
+}
+.descriptif .fa-heart {
   font-size: 24px;
 }
 
@@ -299,6 +320,8 @@ footer {
 }
 
 .menu__p2 {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
   padding: 10px;
   background-color: #f2f2f2;
@@ -308,10 +331,11 @@ footer {
   text-transform: uppercase;
 }
 .menu__p2 .hover-animation {
+  width: 5%;
   display: inline-block;
   position: relative;
 }
-.menu__p2 .hover-animation:after {
+.menu__p2 .hover-animation::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -343,6 +367,13 @@ footer {
 }
 .card__menu span {
   font-weight: 900;
+}
+
+/* aside btn */
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=index.css.map */

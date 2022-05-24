@@ -149,6 +149,8 @@ footer {
 }
 
 .menu__p2 {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
   padding: 10px;
   background-color: #f2f2f2;
@@ -158,10 +160,11 @@ footer {
   text-transform: uppercase;
 }
 .menu__p2 .hover-animation {
+  width: 5%;
   display: inline-block;
   position: relative;
 }
-.menu__p2 .hover-animation:after {
+.menu__p2 .hover-animation::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -193,6 +196,13 @@ footer {
 }
 .card__menu span {
   font-weight: 900;
+}
+
+/* aside btn */
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
