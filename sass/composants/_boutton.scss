@@ -10,4 +10,9 @@
     border-radius: 50px;
     background: rgb(147, 86, 220);
     background: linear-gradient(0deg, rgba(147, 86, 220, 1) 9%, rgba(255, 121, 218, 0.8870141806722689) 86%);
+
+    &:hover{
+        box-shadow:$box-shadow;
+        background: linear-gradient(180deg, $purple-color 0% ,$pink-color 100%);
+    }
 }

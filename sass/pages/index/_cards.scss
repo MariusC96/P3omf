@@ -18,7 +18,7 @@
     .card {
         background-color: white;
         box-shadow: $box-shadow;
-        width: ãuto;
+        width: auto;
         height: 100%;
         border-radius: 30px;
         display: flex;
@@ -52,7 +52,7 @@
             }
         }
     }
-}
+
 
 .descriptif {
     display: flex;
@@ -73,36 +73,51 @@
         position: relative;
         
 
-        .fa-heart1 {
+        .fa-heart {
             color: black;
            position: absolute;
-           &:active{
-               
-               color: blue;
-           }
-           
+           right: 0px;
+           top: 0px;  
+           font-size: 35px;         
         }
-        .hiddenheart{
 
-            .fa-solid{
+        .fa-regular{    
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            &:hover{
                 opacity: 0;
-                
-                &:active{
+                z-index: 1;
+                + .fa-solid{
                     opacity: 1;
-                    color: $purple-color;
-                }        
-
+                    animation: heart 0.5s linear both;
+                }
             }
         }
+        .fa-solid{
+            z-index: 1;
+            opacity: 0;
+            background: linear-gradient(50deg, $purple-color 0% ,$pink-color 100%);
+            background-clip: content-box;
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+            transform-origin: 50% bottom;
+            transform: scale(1);
+        }
+       
          
         
         }
-
-        .fa-heart {
-
-            font-size: 24px;
-
-        }
-
     }
+}
+
+ 
    
+    @keyframes heart {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }

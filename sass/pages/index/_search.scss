@@ -6,8 +6,12 @@
     .logo {
         padding: 20px;
     }
-    p {
-        color: gray;
-        font-size: 25px;
+    input {
+        border: none;
+        text-align: center;
+        background-color: $gray-color-banner;
+        font-size: 30px;
+    
+      }
+        
     }
-}

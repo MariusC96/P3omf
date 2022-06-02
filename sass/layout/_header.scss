@@ -7,6 +7,9 @@ header{
         @include flexMid;
 height: 100%;
 width: 70px;
+& a{
+    color: black;
+}
     }
     .titlelogo {
         width: auto;

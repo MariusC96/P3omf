@@ -1,5 +1,5 @@
 /* section */
-section {}
+
 
 .img__section {
     position: relative;
@@ -20,7 +20,7 @@ section {}
         width: 100%;
         position: absolute;
         bottom: 0px;
-        background-color:$gray-color-banner;
+        background-color: $gray-color-banner;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
@@ -34,30 +34,31 @@ section {}
         }
     }
 }
-.fa-heart{
+
+.fa-heart {
     padding: 10px;
     font-size: 24px;
 }
 
-.menu__p2{
+.menu__p2 {
     @include flexcolumn;
     gap: 30px;
     padding: 10px;
     background-color: $gray-color-banner;
-    
-    p{
+
+    p {
         font-weight: lighter;
         text-transform: uppercase;
     }
-    
+
     .hover-animation {
         width: 5%;
         display: inline-block;
         position: relative;
-        
-      }
-      
-      .hover-animation::after {
+
+    }
+
+    .hover-animation::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -68,36 +69,46 @@ section {}
         background-color: $green-color;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
-      }
-      
-      .hover-animation:hover:after {
+    }
+
+    .hover-animation:hover:after {
         transform: scaleX(1);
         transform-origin: bottom left;
-      }
+    }
 
+    .main__button {
+        padding: 30px;
+        @include flexMid;
+
+        .button {
+            @include flexMid;
+            width: 40%;
+        }
+    }
 }
 
-.card__menu{
+.card__menu {
     padding: 10px;
-    background-color:white;
+    background-color: white;
     border-radius: 20px;
     box-shadow: $box-shadow;
 
-    .price__menu{
+    .price__menu {
         display: flex;
         justify-content: space-between;
-    
+
     }
-    p{
+
+    p {
         text-transform: none;
     }
 
-    span{
+    span {
         font-weight: 900;
     }
 }
 
-/* aside btn */ 
-aside{
+/* aside btn */
+aside {
     @include flexMid;
 }
