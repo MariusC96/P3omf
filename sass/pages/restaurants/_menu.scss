@@ -1,114 +1,97 @@
 /* section */
+.list_menu{
 
 
-.img__section {
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
-
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 300px;
-    }
-
-    .banner__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        position: absolute;
-        bottom: 0px;
-        background-color: $gray-color-banner;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-
-        h2 {
-            padding: 10px;
-            font-family: 'Raleway', sans-serif;
-            font-family: 'Roboto', sans-serif;
-            font-family: 'Shrikhand', cursive;
-            font-weight: 100;
-
-        }
-    }
-}
-
-.fa-heart {
-    padding: 10px;
-    font-size: 24px;
-}
-
-.menu__p2 {
+    @include flexcolumn;
+.menu{
     @include flexcolumn;
     gap: 30px;
     padding: 10px;
     background-color: $gray-color-banner;
+    &__title{
+        @include  flexcolumn; 
+        h3{}
+        .underline{
+            height: 3px;
+            width: 50px;
+            background-color: $green-color;
+        }
+        }
 
-    p {
-        font-weight: lighter;
-        text-transform: uppercase;
-    }
-
-    .hover-animation {
-        width: 5%;
-        display: inline-block;
-        position: relative;
-
-    }
-
-    .hover-animation::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $green-color;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-
-    .hover-animation:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
-    .main__button {
-        padding: 30px;
-        @include flexMid;
-
-        .button {
-            @include flexMid;
-            width: 40%;
+     &__cards{
+         @include flexrow;
+         gap: 30px;
+        
+         .card{
+            @include flexrow;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: $box-shadow;
+            overflow: hidden;
+            height: 100px;
+            width: auto;
+            flex: 1;
+         .description{
+            @include flexcolumn;
+            justify-content: space-around;
+            height: 100%;
+            padding-left: 10px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: auto;
+            flex: 1;
+         h4{
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+         }
+         p{
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+         }
+         }
+        .price{
+            font-weight: bold;
+            align-self: flex-end;
+            margin-bottom: 10px;
+            width: 50px;
+        }
+        .check {
+            
+            font-size: 18px;
+            padding: 20px;
+            color: #FFFFFF;
+            background-color: $green-color;
+            border-radius: 0px 15px 15px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -75px;
+            transition-duration: 0.8s;
+            height: 100%;
+            
+           
+        }
+        
+        &:hover > .check{
+            margin-right: 0px;
+           
+        }
+        &:hover .fa-check-circle{
+            transition: all 0.5s 0.5s;
+            transform: rotate(360deg);
+           
+        }
         }
     }
-}
-
-.card__menu {
-    padding: 10px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: $box-shadow;
-
-    .price__menu {
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    p {
-        text-transform: none;
-    }
-
-    span {
-        font-weight: 900;
+   
     }
 }
 
-/* aside btn */
-aside {
-    @include flexMid;
-}
+

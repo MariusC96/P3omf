@@ -4,6 +4,14 @@
 /* color page */
 /* font */
 /* change color img in white */
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   padding: 0;
   margin: 0;
@@ -119,21 +127,19 @@ footer {
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  box-shadow: 0px -1px 3px gray;
-}
-.nav .logo {
-  padding: 20px;
-}
-.nav input {
+.search {
+  width: 100%;
   border: none;
+  background-color: #EAEAEA;
+  margin: 0px;
+  padding: 12px;
+}
+
+input.text {
+  font-family: FontAwesome, "Roboto";
+  text-decoration: inherit;
   text-align: center;
-  background-color: #f2f2f2;
-  font-size: 30px;
+  font-weight: bold;
 }
 
 .menu {
@@ -176,6 +182,7 @@ footer {
   background-color: #f2f2f2;
   border-radius: 30px;
   box-shadow: 0px 5px 10px rgb(211, 204, 204);
+  color: black;
 }
 .fonctionnement__item:hover {
   background-color: rgba(220, 192, 248, 0.973);
@@ -201,7 +208,7 @@ footer {
 .fonctionnement__item .icon .fa-store:hover {
   color: #9356DC;
 }
-.fonctionnement__item a {
+.fonctionnement__item .text {
   padding-right: 30px;
   color: black;
   text-decoration: none;
@@ -235,6 +242,8 @@ footer {
 }
 .restaurants .card .img__card {
   position: relative;
+  text-decoration: none;
+  color: black;
 }
 .restaurants .card .img__card img {
   object-fit: cover;
@@ -266,6 +275,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-decoration: none;
+  color: black;
 }
 .restaurants .descriptif__icon {
   display: flex;
@@ -303,117 +314,96 @@ footer {
   transform: scale(1);
 }
 
-@keyframes heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* section */
-.img__section {
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
-}
-.img__section img {
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
-}
-.img__section .banner__title {
+.list_menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  background-color: #f2f2f2;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  flex-direction: column;
 }
-.img__section .banner__title h2 {
-  padding: 10px;
-  font-family: "Raleway", sans-serif;
-  font-family: "Roboto", sans-serif;
-  font-family: "Shrikhand", cursive;
-  font-weight: 100;
-}
-
-.fa-heart {
-  padding: 10px;
-  font-size: 24px;
-}
-
-.menu__p2 {
+.list_menu .menu {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 10px;
   background-color: #f2f2f2;
 }
-.menu__p2 p {
-  font-weight: lighter;
-  text-transform: uppercase;
+.list_menu .menu__title {
+  display: flex;
+  flex-direction: column;
 }
-.menu__p2 .hover-animation {
-  width: 5%;
-  display: inline-block;
-  position: relative;
-}
-.menu__p2 .hover-animation::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
+.list_menu .menu__title .underline {
+  height: 3px;
+  width: 50px;
   background-color: #99E2D0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
 }
-.menu__p2 .hover-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.menu__p2 .main__button {
-  padding: 30px;
+.list_menu .menu__cards {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  gap: 30px;
 }
-.menu__p2 .main__button .button {
+.list_menu .menu__cards .card {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  width: 40%;
-}
-
-.card__menu {
-  padding: 10px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 5px 10px rgb(211, 204, 204);
+  overflow: hidden;
+  height: 100px;
+  width: auto;
+  flex: 1;
 }
-.card__menu .price__menu {
+.list_menu .menu__cards .card .description {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
+  flex: 1;
 }
-.card__menu p {
-  text-transform: none;
+.list_menu .menu__cards .card .description h4 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card__menu span {
-  font-weight: 900;
+.list_menu .menu__cards .card .description p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
-/* aside btn */
-aside {
+.list_menu .menu__cards .card .price {
+  font-weight: bold;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  width: 50px;
+}
+.list_menu .menu__cards .card .check {
+  font-size: 18px;
+  padding: 20px;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: -75px;
+  transition-duration: 0.8s;
+  height: 100%;
+}
+.list_menu .menu__cards .card:hover > .check {
+  margin-right: 0px;
+}
+.list_menu .menu__cards .card:hover .fa-check-circle {
+  transition: all 0.5s 0.5s;
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=index.css.map */

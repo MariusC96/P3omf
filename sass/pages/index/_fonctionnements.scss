@@ -23,6 +23,7 @@
     background-color: $gray-color-banner;
     border-radius: 30px;
     box-shadow:$box-shadow;
+    color: black;
 
     &:hover{
         background-color:rgba(220, 192, 248, 0.973);
@@ -54,7 +55,7 @@
       }
 
       
-    a{
+    .text{
         padding-right: 30px;
         color:black; 
         text-decoration:none;
